@@ -1,4 +1,11 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.tree;
+
+import com.jiaflu.leetcode.TreeNode;
+
+/**
+ * 题目：
+ * 序列化和反序列化二叉搜索树
+ */
 
 public class $449_SerializeAndDeserializeBST {
 

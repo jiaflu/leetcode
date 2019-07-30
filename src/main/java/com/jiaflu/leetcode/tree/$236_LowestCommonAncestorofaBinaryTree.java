@@ -1,4 +1,12 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.tree;
+
+import com.jiaflu.leetcode.TreeNode;
+
+/**
+ * 题目：
+ * 二叉树的最近公共祖先
+ */
+
 
 public class $236_LowestCommonAncestorofaBinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

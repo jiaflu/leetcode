@@ -1,7 +1,16 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.twoPointers;
 
 import java.util.HashSet;
 import java.util.Set;
+
+/**
+ * 题目：
+ * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ * 解答：
+ * 双指针
+ * - `head`：遍历 `s` 中的节点
+ * - `end`：记录每个子串出现重复前的最后一个节点
+ */
 
 public class $3_LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {

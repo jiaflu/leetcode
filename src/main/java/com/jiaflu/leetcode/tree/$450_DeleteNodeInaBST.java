@@ -1,4 +1,20 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.tree;
+
+import com.jiaflu.leetcode.TreeNode;
+
+/**
+ * 题目：
+ * 删除二叉搜索树中的节点
+ *
+ * 解答：
+ * - BST 搜索
+ * - 找到 `key` 删除时
+ *   - 左子树为空则返回右子树作为新的根
+ *   - 右子树为空则返回左子树作为新的根
+ *   - 左右子树都存在，返回后继节点（右子树最左叶子）作为新的根
+ *     - 找到后继节点
+ *     - 删除后继节点
+ */
 
 public class $450_DeleteNodeInaBST {
 

@@ -1,4 +1,6 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.tree;
+
+import com.jiaflu.leetcode.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

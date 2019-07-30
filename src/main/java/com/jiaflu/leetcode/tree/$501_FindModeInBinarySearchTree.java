@@ -1,12 +1,20 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.tree;
+
+import com.jiaflu.leetcode.TreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class $501_FindModeInBinarySearchTree {
+/**
+ * 题目：
+ * 二叉搜索树中的众数
+ *
+ * 优化：不使用额外空间
+ */
 
+public class $501_FindModeInBinarySearchTree {
 
     Map<Integer, Integer> map = new HashMap<>();
     public int[] findMode(TreeNode root) {
