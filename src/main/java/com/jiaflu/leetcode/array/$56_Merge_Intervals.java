@@ -22,7 +22,7 @@ import java.util.List;
  * - 二维数组的排序
  */
 
-public class $56_MergeIntervals {
+public class $56_Merge_Intervals {
     public int[][] merge(int[][] intervals) {
         if (intervals == null || intervals.length == 0) {
             return intervals;

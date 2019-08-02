@@ -1,4 +1,4 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.backtracking;
 
 import java.util.HashMap;
 import java.util.Map;
