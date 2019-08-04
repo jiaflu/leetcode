@@ -1,4 +1,4 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.generics;
 
 public class Box<T> {
     private T t;
