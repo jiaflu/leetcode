@@ -30,6 +30,7 @@ public class Solution4 {
         for (int i = 0; i < arrQuery.length; i++) {
             int tmp = arrQuery[i];
             int cnt = 0;
+            // 时间复杂度过高,优化位二分查找
             for (int j = 0; j < arr.length; j++) {
                 if (tmp <= arr[j]) {
                     arr[j] = arr[j] - 1;
