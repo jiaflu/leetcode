@@ -1,4 +1,4 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.graph;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,8 @@ import java.util.PriorityQueue;
  * 题目：K 站中转内最便宜的航班
  *
  * 解答：
- *
+ * - 图论
+ * - Dijkstra
  */
 
 public class $787_Cheapest_Flights_Within_K_Stops {
@@ -19,10 +20,12 @@ public class $787_Cheapest_Flights_Within_K_Stops {
      *  下一站的和费用
      */
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+        // 保存不同的始发站可到达的不同的下一站和费用
         Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
         for(int[] flight : flights) {
-            if(!map.containsKey(flight[0]))
+            if(!map.containsKey(flight[0])) {
                 map.put(flight[0], new HashMap<>(0));
+            }
             map.get(flight[0]).put(flight[1], flight[2]);
         }
 
@@ -41,8 +44,9 @@ public class $787_Cheapest_Flights_Within_K_Stops {
             if(k <= K) {
                 // 防止下一站城市不在map中
                 Map<Integer, Integer> nextHops = map.getOrDefault(tar, new HashMap<>());
-                for(Map.Entry<Integer, Integer> entry : nextHops.entrySet())
-                pq.offer(new int[]{fee + entry.getValue(), entry.getKey(), k+1});
+                for(Map.Entry<Integer, Integer> entry : nextHops.entrySet()) {
+                    pq.offer(new int[]{fee + entry.getValue(), entry.getKey(), k+1});
+                }
             }
         }
 
