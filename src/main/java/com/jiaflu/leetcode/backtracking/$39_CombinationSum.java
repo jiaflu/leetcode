@@ -58,4 +58,17 @@ public class $39_CombinationSum {
             }
         }
     }
+    static int count = 0;
+    private static void dfs(int[] nums, int index, int target) {
+        if (0 == target) {
+            count++;
+            return;
+        }
+        if (target < nums[0]) {
+            return;
+        }
+        for (int i = index; i < nums.length && nums[i] <= target; i++) {
+            dfs(nums, i, target - nums[i]);
+        }
+    }
 }
