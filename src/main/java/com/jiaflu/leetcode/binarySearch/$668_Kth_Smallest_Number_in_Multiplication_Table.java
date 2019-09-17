@@ -1,4 +1,4 @@
-package com.jiaflu.leetcode;
+package com.jiaflu.leetcode.binarySearch;
 
 import java.util.ArrayList;
 import java.util.List;
