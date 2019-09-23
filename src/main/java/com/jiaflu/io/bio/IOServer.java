@@ -1,12 +1,15 @@
 package com.jiaflu.io.bio;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 
 /**
  * 服务端
+ *
+ * 面试题：实现一个 HTTP 服务器
+ *
  */
 
 public class IOServer {
@@ -30,6 +33,9 @@ public class IOServer {
                                 System.out.println(new String(data, 0, len));
                             }
                             Thread.sleep(2000);
+                            BufferedWriter output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+                            output.write("Success!!" + new Date().toString() + "\r\n");
+                            output.flush();
                         } catch (IOException | InterruptedException e) {
 
                         }
