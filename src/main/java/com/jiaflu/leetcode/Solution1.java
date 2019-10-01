@@ -8,12 +8,12 @@ import java.util.List;
 
 public class Solution1 {
     public static void main(String[] args) {
-//        System.out.println(3 * 0.1);
-//        System.out.println(4 * 0.1);
-//        System.out.println(3 * 0.1 == 0.3);
-//        System.out.println(13 * 0.1 == 1.3);
-//        System.out.println(9 * 0.1 == 0.9);
-//        System.out.println(3 * 0.1 / 3);
-        System.out.printf("%tD%n", new Date());
+        String str1 = "abcdef";
+        String str2 = "abcdef";
+        byte[] b1 = str1.getBytes();
+        byte[] b2 = str2.getBytes();
+
+        System.out.println(b1.hashCode());
+        System.out.println(b2.hashCode());
     }
 }

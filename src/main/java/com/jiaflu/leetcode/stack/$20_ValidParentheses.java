@@ -1,9 +1,7 @@
 package com.jiaflu.leetcode.stack;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 题目：
@@ -20,7 +18,24 @@ import java.util.Stack;
 
 public class $20_ValidParentheses {
 
-    public boolean isValid(String s) {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        List<Boolean> res = new ArrayList<>();
+        int n = Integer.valueOf(in.nextLine());
+        for (int i = 0; i < n; i++) {
+            String input = in.nextLine();
+            res.add(isValid(input));
+        }
+        for (int i = 0; i < res.size(); i++) {
+            if (res.get(i)){
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+
+    public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         Map<Character, Character> map = new HashMap<>();
         map.put('(', ')');
