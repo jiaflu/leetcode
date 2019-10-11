@@ -19,11 +19,17 @@ public class $10_RegularExpressionMatching {
 
     public boolean isMatch(String s, String p) {
         if (p.isEmpty()) return s.isEmpty();
+
+        // 判断第一个字符是否相等,包含 p 中为 . 的情况
         boolean first_match = (!s.isEmpty() &&
                 (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
+
+        // p[1] 为 *
         if (p.length() >= 2 && p.charAt(1) == '*') {
+            //s[0] != p[0] 的情况 和 s[0] == p[0] 的 情况
             return (isMatch(s, p.substring(2)) || (first_match && isMatch(s.substring(1), p)));
         } else {
+            // p[1] 不为 *
             return first_match && isMatch(s.substring(1), p.substring(1));
         }
     }

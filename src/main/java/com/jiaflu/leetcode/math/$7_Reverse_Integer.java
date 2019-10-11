@@ -16,9 +16,11 @@ public class $7_Reverse_Integer {
         while (x != 0) {
             int pop = x % 10;
             x /= 10;
+            // 判断 rev > 214748364 或者 rev = 214748364 并且 pop > 7 的情况
             if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) {
                 return 0;
             }
+            // 判断 rev < -214748364 或者 rev = 214748364 并且 pop < -8 的情况
             if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) {
                 return 0;
             }
@@ -29,6 +31,7 @@ public class $7_Reverse_Integer {
     }
 
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE);
         System.out.println(reverse(1534236469));
         if (1534236469 > Integer.MAX_VALUE/2) {
             System.out.println(true);
