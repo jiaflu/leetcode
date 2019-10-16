@@ -2,6 +2,7 @@ package com.jiaflu.youzan;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Solution4 {
     public static void main(String[] args) {
@@ -10,6 +11,7 @@ public class Solution4 {
         System.out.println(-3 << 1);
         System.out.println(Math.pow(2, 8));
         System.out.println(-3 >>> 1);
+
     }
 
 }
